@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Dynamic CSS" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <p class={pcolor}>Dynsmic CSS demo</p>
+        </div>
+        <div class="slds-var-p-around_small">
+            <lightning-button
+            label="Add CSS"
+            variant="Brand"
+            onclick={addCSSHandler}
+            class="slds-var-p-around_small">
+        </lightning-button>
+
+        <lightning-button
+        label="remove CSS"
+        variant="Brand"
+        onclick={removeCSSHandler}
+        class="slds-var-p-around_small">
+    </lightning-button>
+
+    <lightning-button
+    label="Togggle CSS"
+    variant="Brand"
+    onclick={toggleCSSHandler}
+    class="slds-var-p-around_small">
+</lightning-button>
+    
+        </div>
+    </lightning-card>
+</template>

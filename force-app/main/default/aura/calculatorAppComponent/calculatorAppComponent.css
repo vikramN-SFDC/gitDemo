@@ -1,0 +1,19 @@
+.THIS {
+   background-color:lightBlue;
+     padding:10px;
+    border-style:15px ;
+    
+}
+.THIS.reult {
+    background-color:LightGreen;
+}
+.THIS.button {
+    background-color:LightYellow;
+     padding:slds-p-around_large;
+     border:2px;
+}
+.THIS.All {
+     padding:slds-p-around_large;
+     border:2px;
+    margin:10px;
+}

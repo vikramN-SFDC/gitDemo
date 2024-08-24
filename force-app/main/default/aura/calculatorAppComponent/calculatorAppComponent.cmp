@@ -1,0 +1,54 @@
+<aura:component  >
+    
+   
+    <aura:attribute name="firstNumber" type="integer"></aura:attribute>
+    <aura:attribute name="secondNumber" type="integer"></aura:attribute>
+    <aura:attribute name="result" type="decimal"></aura:attribute>
+    <aura:attribute name="isAdd" type="Boolean" default="false"></aura:attribute>
+    <aura:attribute name="isSub" type="Boolean" default="false"></aura:attribute>
+    <aura:attribute name="isDiv" type="Boolean" default="false"></aura:attribute>
+    <aura:attribute name="isMul" type="Boolean" default="false"></aura:attribute>
+    <aura:attribute name="isClear" type="Boolean" default="false"></aura:attribute>
+    
+    <div class="slds-box">
+        <lightning:input label="Enter First number" value="{!v.firstNumber}"></lightning:input>
+        <lightning:input label="Enter second number" value="{!v.secondNumber}"></lightning:input>
+    </div>
+    
+    <div class="button">
+        <lightning:button variant="brand" label="Addition" title="Addition" onclick="{!c.add}" />
+        <lightning:button variant="brand" label="subtraction" title="subtraction" onclick="{!c.sub}" /> 
+        <lightning:button variant="brand" label="multiplication" title="multiplication" onclick="{!c.mul}" />
+        <lightning:button variant="brand" label="Division" title="Division" onclick="{!c.div}" />
+        <lightning:button variant="brand" label="Clear" title="Clear" onclick="{!c.clear}" />
+        
+    </div>
+    <aura:if isTrue="{!v.isAdd}">
+        <div class="reult">
+            <strong>Result of Addition::{!v.result}</strong>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.isSub}">
+        <div class="reult">
+            <strong>Result of Subtraction::{!v.result}</strong>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.isMul}">
+        <div class="reult">
+            <strong>Result of Multiplication::{!v.result}</strong>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.isDiv}">
+        <div class="reult">
+            <strong>Result of Division::{!v.result}</strong>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.isClear}">
+        <div class="reult">
+            
+        </div>
+    </aura:if>
+    
+    
+</aura:component>

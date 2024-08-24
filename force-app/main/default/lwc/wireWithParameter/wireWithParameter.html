@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Wire with parameters">
+        <template for:each={filteredAccount.data} for:item="acc">
+            <div key={acc.id}>
+                <p> name={acc.Name}</p>
+                <p> Id={acc.Id}</p>
+            </div>
+              
+         </template>
+         <div> <lightning-input type="text" label="Enter Id" onchange={chnageHandler}></lightning-input></div>  
+    </lightning-card>
+</template>

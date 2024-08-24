@@ -1,0 +1,14 @@
+<template> 
+    <lightning-card title="nested private object property">
+        <p class="slds-var-p-around_small">
+            {myDetsils.fname} {myDetails.lname}
+        </p>
+        <div class="slds-var-p-around_small">
+            <lightning-button 
+            label="change name"
+            varient="brand"
+            onclick={clickHandler}></lightning-button>
+        </div>
+    </lightning-card>
+    
+</template>

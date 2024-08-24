@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Parent To child Communication" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" variant="standard" label="Enter text" 
+                     placeholder="Enter text" onchange={handleChange}>
+             </lightning-input>
+
+             <lightning-button variant="brand" label="Brand"  onchange={colourHandler}>
+              </lightning-button>
+
+              <lightning-button variant="brand" label="Brand"  onchange={fruitHandler}>
+            </lightning-button>
+            <lightning-button variant="brand" label="Brand" onchange={alfaHandler}></lightning-button>
+               <c-demo-child-cmp name={nameString} colour={colours} fruit={fruit} alfabet={alfabets}></c-demo-child-cmp>
+        </div>
+    </lightning-card>
+</template>

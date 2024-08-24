@@ -1,0 +1,43 @@
+<template>
+<lightning-card title="child Component" >
+<div class="slds-box">
+    data from parent---{stringData}
+</div>
+<div class="slds-box">
+    <template for:each={studentList} for:item="student">
+        <div key={name}>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="Example default base table of Opportunities">
+            <thead>
+                <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="name">{student.name}
+                    </div>                 
+                </th>
+                </tr>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="age">{student.age}
+                        </div>
+                    </th>
+                    </tr>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="qualification">{student.qualification}</div>
+                        </th>
+                        </tr>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="city">{student.city}</div>
+                            </th>
+                            </tr>
+                </thead>
+                </table>
+            
+        
+        
+            
+        </div>
+    </template>
+</div>
+</lightning-card>
+</template>

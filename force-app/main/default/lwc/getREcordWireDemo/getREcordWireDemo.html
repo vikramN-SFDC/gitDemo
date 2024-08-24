@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="record Adapter">
+
+        <template lwc:if={accounts}>
+            <p>  name :: {accounts.fields.Name.value} </p>
+            <p>  phone :: {accounts.fields.Phone.value} </p>
+            
+        </template>
+    </lightning-card>
+</template>

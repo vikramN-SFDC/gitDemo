@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    
+    <ui:inputText label="FirstName" aura:id="FName" placeholder="first name" />
+    <ui:inputText label="LastName" aura:id="LName" placeholder="Last name" /> 
+    <ui:button  label ="SUBMIT" aura:id="ButtonForAction" press="{!c.GetOutLookName}"/>
+    <ui:outputText aura:id="NameToDisplay" value=""/>   
+
+</aura:component>

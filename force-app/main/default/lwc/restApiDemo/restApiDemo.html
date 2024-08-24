@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Account Data Using REST api">
+        <lightning-button label="Get Data" onclick={handleSearch}></lightning-button>
+       <template if:true={searchAcc}>
+            <template for:each={searchAcc.records} for:item="ac">
+                <lightning-card key={ac.url}>
+                    <div class="slds-p-around_small">
+                        <p><strong>FirstName:</strong> {ac.FirstName}</p>
+                        <p><strong>LastName:</strong> {ac.LastName}</p>
+                        <p><strong>Phone:</strong> {ac.Phone}</p>
+                        <p><strong>url:</strong> {ac.attributes.url}</p>
+                    </div>
+                </lightning-card>
+            </template>
+        </template>
+
+
+                <template if:true={searchAcc}>
+                    <div style="height: 300px;" >
+                        <lightning-datatable
+                                key-field="FirstName"
+                                data={data}
+                                columns={columns}>
+                        </lightning-datatable>
+                    </div>
+                </template>
+                
+        
+        
+    </lightning-card>
+</template>

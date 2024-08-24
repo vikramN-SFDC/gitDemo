@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="message1" type="string" default="button not clicked"/>
+    
+    hello : {!v.message1}
+    <br/><br/>
+    <lightning:button label="click me" onclick="{!c.handleclick1}"/>
+    
+</aura:component>

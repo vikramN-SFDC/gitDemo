@@ -1,0 +1,34 @@
+<apex:page showHeader="Yes" standardController="account" extensions="demoVFcalculatorController">
+<apex:form >
+<apex:pageBlock title="Block 1">
+<apex:pageBlockSection collapsible="true" columns="2" title="Account criation form">
+    <apex:inputField value="{!account.name}"/>
+    <apex:inputField value="{!account.rating}"/>
+    <apex:inputField value="{!account.industry}"/>
+    <apex:inputField value="{!account.Active__c}"/>
+    
+    </apex:pageBlockSection>
+    <apex:pageBlockButtons location="bottom">
+        <apex:commandButton value="save" action="{!save}"/>
+        <apex:commandButton value="cancel" action="{!cancel}"/>
+    </apex:pageBlockButtons>
+    </apex:pageBlock>
+</apex:form> 
+    
+    <apex:form title="CALCULATOR">
+       <apex:pageBlock >
+       <apex:pageBlockSection >
+           <apex:inputText label="Enter first number" value="{!numOne}"></apex:inputText>
+           <apex:inputText label="Enter Secound number" value="{!numTwo}"></apex:inputText>
+           <apex:outputText label="Result" value="{!result}"></apex:outputText>
+  </apex:pageBlockSection>  
+           <apex:pageBlockButtons location="Bottom">
+            <apex:commandButton value="Sum" action="{!sum}"/>
+             <apex:commandButton value="sub" action="{!sub}"/>
+             <apex:commandButton value="mul" action="{!mul}"/>
+             <apex:commandButton value="div" action="{!div}"/>
+             <apex:commandButton value="clear" action="{!clear}" />  
+</apex:pageBlockButtons>
+          </apex:pageBlock> 
+     </apex:form>
+</apex:page>

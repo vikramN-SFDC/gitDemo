@@ -1,0 +1,20 @@
+<aura:component implements=
+                "flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" >
+     <aura:attribute name="EligibleOrNot" type="boolean" default="true"/>
+    <ui:inputText label="First Name" aura:id="FName" placeholder="first name" />
+    <ui:inputText label="Last Name" aura:id="LName" placeholder="Last name" /> 	
+    <ui:inputText label ="Age" aura:id="LAge" placeholder="00"/>
+    <ui:button aura:id="ButtonForAction" label ="Check eligilibility"  
+               press="{!c.GetEligibility}"/>
+    
+    <aura:if isTrue="{!v.EligibleOrNot}">
+     congrats!! You can Vote.
+    <ui:button label="Give Vote"/>
+    <aura:set attribute="else">
+        Sorry!!You cannot vote.
+     <ui:button label="Cancle vote"/>
+
+    </aura:set>
+</aura:if>
+</aura:component>

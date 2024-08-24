@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Tab set" icon-name="custom:custom40">
+
+        <lightning-button variant="brand" label="Show Cashless info" onclick={handelClick}> 
+        </lightning-button>
+
+         <lightning-button variant="brand" label="Show Reimbursment info" onclick={handelClick}> 
+        </lightning-button>
+
+        <lightning-button variant="brand" label="Hide Cashless info" onclick={handelClick}> 
+        </lightning-button>
+
+        <lightning-button variant="brand" label="Hide Reimbursment info" onclick={handelClick}> 
+        </lightning-button>
+     
+        <lightning-tabset variant="scoped">
+            <template if:true={VarTabOneBool}>
+                <lightning-tab label="Item one">Content for Cashless info</lightning-tab>
+            </template>
+
+            <template if:true={VarTabTwoBool}>
+                <lightning-tab label="Item two">Content for Reimbursment info</lightning-tab>
+            </template>
+        </lightning-tabset>
+    </lightning-card> 
+    
+</template>

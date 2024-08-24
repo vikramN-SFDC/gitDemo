@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Parent To child Communication" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+         <lightning-input type="text" variant="standard" label="Enter text" placeholder="Enter text"
+             onchange={handleChange}></lightning-input>
+        </div>
+
+        <lightning-input type="text" variant="standard" label="Enter name" onchange={handleName}></lightning-input>
+  
+        <c-demo-child-componant string-data={inputString} student-list={listOfStudents}></c-demo-child-componant>
+          
+    </lightning-card>
+</template>

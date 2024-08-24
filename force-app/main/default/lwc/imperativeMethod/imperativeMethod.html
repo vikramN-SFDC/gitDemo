@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Imperative Method">
+   <lightning-button variant="success" label="press button" onclick={changeHandler}>
+   </lightning-button>
+   <template for:each={oppData} for:item="oppt">
+    
+               <div key={oppt.id}>
+                name={oppt.Name},
+                amount={oppt.Amount},
+                stageName={oppt.StageName},
+                closedate={oppt.CloseDate}
+              </div>
+</template>
+  </lightning-card> 
+</template>

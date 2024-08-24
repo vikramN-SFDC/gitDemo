@@ -1,0 +1,12 @@
+.list-first{
+    border-top:1px solid blue;
+    padding-top:5px;
+
+}
+
+.list-last{
+    border-bottom:1px solid rgb(86, 86, 142);
+    padding-bottom:5px;
+
+
+}

@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="IMDb Movie Search">
+        <lightning-layout class="slds-m-around_medium">
+            <lightning-layout-item size="5">
+                    <lightning-input label="Enter Movie Name" value={movieName} onchange={handleInputChange}></lightning-input>
+            </lightning-layout-item>
+
+            <lightning-layout-item class="slds-mtop-_large slds=m-left_medium">
+                    <lightning-button label="Search" onclick={handleSearch}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        
+        <template if:true={searchResults}>
+            <template for:each={searchResults.result} for:item="movie">
+                <lightning-card key={movie.imdbID}>
+                    <img src={movie.Poster} class="slds-p-around_small"/>
+                    <div class="slds-p-around_small">
+                        <p><strong>Title:</strong> {movie.Title}</p>
+                        <p><strong>Year:</strong> {movie.Year}</p>
+                        <p><strong>Type:</strong> {movie.Type}</p>
+                        <p><strong>imdbID:</strong> {movie.imdbID}</p>
+                    </div>
+                </lightning-card>
+            </template>
+        </template>
+
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+    </lightning-card>
+</template>

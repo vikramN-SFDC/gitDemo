@@ -1,0 +1,15 @@
+<template>
+   <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+
+    <lightning-input type="text" variant="Success"  label="Get Data" placeholder="type here..." 
+    onchange={handleChange}>
+
+    </lightning-input>
+
+    <template for:each={totalrec} for:item="tot">
+        <p key={tot.id}>
+            Name:: {tot.Name}
+        </p>
+    </template>
+   </lightning-card>
+</template>

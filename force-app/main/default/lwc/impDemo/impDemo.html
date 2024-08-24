@@ -1,0 +1,29 @@
+<template>
+   <lightning-card title="Imperative Class">
+
+  <lightning-button variant="success" title="Imerative" label="Imerative" onclick={hanleclick}></lightning-button>
+  
+  <lightning-input title="get data" label="get data" onchange={handlechange}></lightning-input>
+  
+  <template for:each={oppCount} for:item="opp">
+    <p key={opp.id}>
+      Name::{opp.Name}
+      CloseDate::{opp.CloseDate}
+      StageName::{opp.StageName}
+    </p>
+  </template>
+</lightning-card> 
+  
+<div></div>
+  
+  <lightning-card title="ConnectedCalBack">
+    <lightning-input type="text" label="enter data" placeholder="Enter Data" onchange={handlechng}></lightning-input>
+    <template for:each={oppConnectedCallback} for:item="opp">
+    <p key={opp.id}>
+      Name::{opp.Name}
+      CloseDate::{opp.CloseDate}
+      StageName::{opp.StageName}
+    </p>
+  </template>
+</lightning-card>
+</template>

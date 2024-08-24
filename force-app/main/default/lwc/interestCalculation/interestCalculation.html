@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Interest Calculation" icon-name="custom:custom22">
+        <lightning-input type="number" label="Enter principle amount" onchange={principleAmountHandller}></lightning-input>
+        <lightning-input type="number" label="Enter Number Of Years " onchange={numberOfYearsHandller}></lightning-input>
+        <lightning-input type="number" label="Enter Interest Rate" onchange={interestRateHandller}></lightning-input>
+   <br><br>
+   <lightning-button label="Calculate Interest" icon-position="center" onclick={calculateInterestHandller}>
+ </lightning-button>
+ <br><br>
+ <lightning-formatted-text value={loan}></lightning-formatted-text>
+
+    </lightning-card>
+</template>

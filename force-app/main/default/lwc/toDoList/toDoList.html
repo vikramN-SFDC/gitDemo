@@ -1,0 +1,47 @@
+<template>
+    
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+        <lightning-card title="Add new task"></lightning-card>
+        <div class="slds-var-p-around_small">
+            <lightning-input 
+            label="Enter Task" 
+            plaseholder="Enter Task Details"
+            message-when-value-missing="Kindly Enter Task Name"
+            required="true"
+            onchange={changeHandler}
+            name="taskName"
+            class="taskName"
+            value={taskName}
+            >
+        </lightning-input>
+            
+            <lightning-input 
+            type="date"  
+            name="taskDate" 
+            label="Set End date" 
+            field-level-help="Defauld End date is today's date"
+           onchange={changeHandler}
+           class="slds-var-p-around_small"
+           value={taskDate}
+           
+            >
+        </lightning-input>
+    <div class="slds-var-p-around_small">
+        <lightning-button label="RESET" variant="Brand" onclick={resetHandler}></lightning-button>
+    </div>
+           
+    <div class="slds-var-p-around_small">
+        <lightning-button label="ADD TASK" variant="Brand" onclick={addTaskHandler}></lightning-button>
+    </div>
+        </div>
+        </div>
+        <div class="slds-col">
+        <lightning-card title="To Do list"></lightning-card>
+        </div>
+        <div class="slds-col"> 
+        <lightning-card title="Completed Items"></lightning-card>
+        </div>
+        </div>
+    
+</template>
